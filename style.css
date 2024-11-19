@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  overflow: hidden; /*corta o conteúdo que ultrapassa o tamanho do elemento, evitando que ele seja renderizado fora da caixa*/
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  width: 90vw;
+}
+
+div {
+  background-size: cover; /*indica ao navegador que a imagem de fundo deve cobrir todo o contêiner, mesmo que seja necessário esticá-la ou cortar parte dela*/
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  height: 80vh;
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+  flex: 0.5;
+  transition: all 0.7s ease-in; /*Ease In, que começa lentamente e acelera, a função Ease Out começa rapidamente e desacelera ao longo do tempo.*/
+}
+
+.image.active {
+  flex: 5;
+}
